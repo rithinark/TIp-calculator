@@ -1,0 +1,42 @@
+.Custom {
+  width: 5rem;
+  height: 2rem;
+  margin: 0.3rem 0.2rem 0.3rem 0;
+  line-height: 2rem;
+  display: block;
+  font-family: var(--font);
+  background-color: var(--cyan);
+  border: 0;
+  border-radius: 0.3em;
+  color: var(--dark-cyan);
+  font-weight: 700;
+  transition: all 0.1s ease-out;
+  text-align: right;
+  position: relative;
+  padding: 0 0.5rem;
+}
+.Custom:focus-visible {
+  outline: 0;
+}
+.Custom-Wrapper > .Custom-Base:checked + .Custom {
+  box-shadow: inset 0 0 5px var(--strong-cyan);
+}
+.Custom[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: var(--dark-cyan);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Custom-Wrapper > .Custom-Base {
+  display: none;
+}
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

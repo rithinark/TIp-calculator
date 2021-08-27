@@ -1,0 +1,25 @@
+.View > .View-Title {
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 600;
+  flex: 1;
+}
+.View > .View-Title::after {
+  content: "/\00a0\00a0person";
+  color: var(--strong-cyan);
+  font-size: 0.9em;
+  display: block;
+  padding: 0.2em;
+}
+.View > .View-Result {
+  color: var(--strong-cyan);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.View {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  width: 100%;
+}

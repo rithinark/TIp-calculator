@@ -1,0 +1,41 @@
+.Button {
+  width: 6rem;
+  height: 2rem;
+  margin: 0.3rem 0.2rem 0.3rem 0;
+  line-height: 2rem;
+  display: block;
+  font-family: var(--font);
+  background-color: var(--dark-cyan);
+  border: 0;
+  border-radius: 0.3em;
+  color: var(--white);
+  font-weight: 700;
+  transition: all 0.25s ease-out;
+}
+.Button-Wrapper > .Button-Base:checked + .Button {
+  background-color: var(--strong-cyan);
+  color:var(--dark-cyan);
+}
+.Button-Wrapper > .Button-Base {
+  display: none;
+}
+input[type*="button"] ~ label {
+  background-color: var(--strong-cyan);
+  width: 10rem;
+  font-size: 0.8rem;
+  margin: 0.3rem;
+  transition: all .2s;
+}
+input[type*="button"] ~ label:active {
+  background-color: var(--cyan);
+  color:var(--dark-cyan);
+}
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

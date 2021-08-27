@@ -1,38 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --font: "Space Mono", monospace !important;
+  font-family: var(--font);
+  font-size: 24px;
+  --strong-cyan: hsl(172, 67%, 45%);
+  --dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --cyan: hsl(185, 41%, 84%);
+  --light-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
 .App {
   text-align: center;
+  background-color: hsl(185, 41%, 84%);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#logo {
+  margin: 2rem;
+}
+.CalcCard {
+  padding: 1.2rem;
+  background-color: var(--white);
+  border-radius: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Button-Group-Wrapper {
+  padding: 0.8rem 0;
+  max-width: 480px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 568px) {
+  .CalcCard {
+    padding: 0.3rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 992px) {
+  .Button-Group-Wrapper {
+    max-width: fit-content;
+  }
+}
+.Button-Group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Box {
+  border-radius: 0.5em;
+  padding: 0.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Reset {
+  margin-top: auto;
 }
